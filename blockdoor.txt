@@ -1,0 +1,15 @@
+term.clear()
+term.setCursorPos(1,1)
+write "PASSWORD: "
+input = read("*")
+if '1234' == input then
+print "Open door"
+redstone.setOutput("bottom",true)
+sleep(3)
+redstone.setOutput("bottom",false)
+else
+print "Wrong password"
+sleep(2)
+end
+os.reboot();
+
